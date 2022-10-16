@@ -84,12 +84,14 @@
             android:paddingStart="12dp">
 
             <RadioButton
+                android:id="@+id/gender_radio_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
                 android:textColor="@color/black"/>
 
             <RadioButton
+                android:id="@+id/gender_radio_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
@@ -98,21 +100,43 @@
 
         </RadioGroup>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/save_info_main"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Info"
-            app:icon="@drawable/ic_baseline_save_alt_24"
-            android:layout_gravity="end"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:paddingBottom="6dp"
-            android:paddingTop="6dp"
+            android:orientation="horizontal"
+            android:gravity="center"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="32dp"/>
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_info_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Info"
+                app:icon="@drawable/ic_baseline_save_alt_24"
+                android:layout_gravity="end"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/remove_all_shared_preferences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove All"
+                app:icon="@drawable/ic_baseline_delete_24"
+                android:layout_gravity="start"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
